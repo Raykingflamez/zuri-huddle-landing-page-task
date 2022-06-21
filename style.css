@@ -36,8 +36,9 @@ main{
 }
 
 /* Header Styles */
-.header{
+header{
     background-image: url(./images/bg-hero-desktop.svg);
+    background-color: #EDFAFF;
     background-size: contain;
     background-position: center;
     height: 100vh;
@@ -51,12 +52,12 @@ main{
     height: 20%;
 }
 
-main .header .header-top img{
+.header-top img{
     width: 120px;
     height: 25px;
 }
 
-main .header .header-top button{
+.header-top button{
     /* outline: none; */
     border: none;
     background-color: #fff;
@@ -143,7 +144,7 @@ main .header .header-top button{
 .flowing .info,
 .your-users .info{
     flex: 50%;
-    padding: 20px;
+    padding: 10px;
     color:  hsl(192, 100%, 9%);
     display: flex;
     flex-direction: column;
@@ -161,6 +162,7 @@ main .header .header-top button{
 .grow .image,
 .flowing .image,
 .your-users .image{
+    padding: 20px;
     flex: 50%;
     height: 100%;
     width: 100%;
@@ -276,6 +278,12 @@ footer{
     margin-right: 10px;
 }
 
+.location p,
+.phone p,
+.email p{
+    color: hsl(210, 27%, 83%);
+}
+
 .links{
     flex: 30%;
     /* height: 80%; */
@@ -300,7 +308,7 @@ footer{
 .social-media{
     flex: 30%;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     /* padding-top: 4em; */
 }
@@ -318,7 +326,7 @@ footer{
     color: hsl(322, 100%, 66%);
 }
 
-footer .copyright{
+.copyright{
     width: 90%;
     margin: auto;
     margin-top: 3em;
@@ -331,14 +339,58 @@ footer .copyright{
 /* Media Queries: For Mobile */
 
 @media screen and (min-width:375px) and (max-width:720px){
+    /* Header Media Queries */
+    header{
+        background-image: url(./images/bg-hero-mobile.svg);
+        /* background-size: cover; */
+        background-position: bottom;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        text-align: center;
+        height: 120vh;
+        width: 100%;
+    }
+
+    .header-top{
+        height: 15%;
+        /* align-items: center; */
+        padding: 15px;
+    }
+
     .header-bottom{
         flex-direction: column;
         
     }
 
+    .header-bottom-left{
+        align-items: center;
+        margin-bottom: 2em;
+        flex: 40%;
+    }
+
+    .header-bottom-left h1{
+        font-size: 24px;
+    }
+
+    .header-bottom-left p{
+        font-size: 18px;
+    }
+
+    .header-bottom-right{
+        flex: 60%;
+    }
+
+
+    /* Info Sections Media Queries */
     .grow,
-    .your-users{
+    .your-users,
+    .flowing{
         flex-direction: column-reverse;
+        height: 80vh;
+        margin-top: 4em;
+        width: 80%;
+        text-align: center;
+        padding: 0.5em;
     }
 
     .flowing{
@@ -346,16 +398,53 @@ footer .copyright{
     }
 
 
+    /* Centered Box Media Queries */
+    .ready{
+        height: 18vh;
+    }
+
+    .show-case{
+        width: 90%;
+        /* height: 200px; */
+        margin-top: 5em;
+        border-radius: 15px;
+        padding: 7px;
+    }
+
+    .show-case h3{
+        font-size: 18px;
+    }
+
+
+    /* Footer Media Queries */
+    footer{
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+    }
+
 
     .footer-details-container{
         flex-direction: column;
+        width: 100%;
+        margin: 0;
     }
 
     .links{
-        flex-direction: column;
+        display: block;
     }
 
-    .links div{
+    .links div {
         margin: 0.5em;
+    }
+
+    .links div li{
+        margin-top: 10px;
+    }
+
+    .copyright{
+        text-align: center;
+        width: 100%;
+        /* display: none; */
     }
 }
