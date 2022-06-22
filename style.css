@@ -326,6 +326,10 @@ footer{
     color: hsl(322, 100%, 66%);
 }
 
+.copy{
+    display: none;
+}
+
 .copyright{
     width: 90%;
     margin: auto;
@@ -418,7 +422,7 @@ footer{
 
     /* Footer Media Queries */
     footer{
-        height: 120vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
     }
@@ -432,6 +436,7 @@ footer{
 
     .links{
         display: block;
+        margin-left: 1em;
     }
 
     .links div {
@@ -442,9 +447,14 @@ footer{
         margin-top: 10px;
     }
 
-    .copyright{
+    .copy{
+        display: block;
         text-align: center;
-        width: 100%;
-        /* display: none; */
+        margin-top: 2em;
+        font-size: 12px;
+    }
+
+    .copyright{
+        display: none;
     }
 }
